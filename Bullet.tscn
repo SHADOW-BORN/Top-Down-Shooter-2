@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://k7hevm2l3ekl"]
+
+[ext_resource type="Texture2D" uid="uid://bnbtmyofi3y6j" path="res://I need more bullets.png" id="1_yhwej"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="INeedMoreBullets" type="Sprite2D" parent="."]
+texture = ExtResource("1_yhwej")

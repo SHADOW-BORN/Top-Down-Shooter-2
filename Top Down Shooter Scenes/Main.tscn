@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_3urqy"]
 radius = 12.3693
 
-[node name="Main" type="Node2D"]
+[node name="World" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("1_2kxnx")
@@ -18,3 +18,5 @@ texture = ExtResource("1_qmhnh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("CircleShape2D_3urqy")
+
+[node name="ShootTimer" type="Timer" parent="Player"]
