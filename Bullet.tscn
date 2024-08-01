@@ -1,12 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://k7hevm2l3ekl"]
+[gd_scene load_steps=3 format=3 uid="uid://k7hevm2l3ekl"]
 
 [ext_resource type="Texture2D" uid="uid://bnbtmyofi3y6j" path="res://I need more bullets.png" id="1_yhwej"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3r1pk"]
+radius = 1.0
+height = 2.0
 
 [node name="Area2D" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -1
+shape = SubResource("CapsuleShape2D_3r1pk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="INeedMoreBullets" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_yhwej")

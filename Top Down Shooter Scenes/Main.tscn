@@ -1,7 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://ioaxx15kkqtj"]
+[gd_scene load_steps=17 format=3 uid="uid://ioaxx15kkqtj"]
 
 [ext_resource type="Script" path="res://Top Down Shooter Scenes/Player.gd" id="1_2kxnx"]
 [ext_resource type="Texture2D" uid="uid://r3x4vku1ilwj" path="res://zetores_2dTDS_assets/post-apoc-tds/player_ready4.png" id="1_qmhnh"]
+[ext_resource type="Texture2D" uid="uid://wgi4yrjyeri6" path="res://zetores_2dTDS_assets/post-apoc-tds/road.png" id="3_2huxy"]
+[ext_resource type="Texture2D" uid="uid://g5poj53g375j" path="res://zetores_2dTDS_assets/post-apoc-tds/car3.png" id="4_0ybpv"]
+[ext_resource type="Texture2D" uid="uid://bo3xb0khnoso3" path="res://zetores_2dTDS_assets/post-apoc-tds/car1.png" id="5_68cl1"]
+[ext_resource type="Texture2D" uid="uid://bq3133hi6omtq" path="res://zetores_2dTDS_assets/post-apoc-tds/corpse1.png" id="6_8hjh7"]
+[ext_resource type="Texture2D" uid="uid://cts0tl2s2klsn" path="res://zetores_2dTDS_assets/post-apoc-tds/corpse2.png" id="7_o00sq"]
+[ext_resource type="Texture2D" uid="uid://d060hbknede02" path="res://zetores_2dTDS_assets/post-apoc-tds/background.png" id="8_m6bfv"]
+[ext_resource type="Texture2D" uid="uid://bw8v8vma8k2rf" path="res://zetores_2dTDS_assets/post-apoc-tds/blood_ground.png" id="9_u7evn"]
+[ext_resource type="Texture2D" uid="uid://3eoaqu6ky83p" path="res://zetores_2dTDS_assets/post-apoc-tds/decor_trash.png" id="10_opnxd"]
+[ext_resource type="Texture2D" uid="uid://djrkon6ka76jn" path="res://zetores_2dTDS_assets/future-tds/particles/blood_0003_Layer-1.png" id="11_n4uab"]
+[ext_resource type="Texture2D" uid="uid://bsp3j6m26v0pi" path="res://zetores_2dTDS_assets/future-tds/particles/blood_0002_Layer-1-copy.png" id="12_uhcln"]
+[ext_resource type="Texture2D" uid="uid://cn8n2bxsn2g3e" path="res://zetores_2dTDS_assets/future-tds/particles/blood_0000_Layer-2.png" id="13_cheok"]
+[ext_resource type="Texture2D" uid="uid://utkhv4k5jqob" path="res://zetores_2dTDS_assets/future-tds/roach_death_1_4.png" id="14_fq51u"]
+[ext_resource type="Texture2D" uid="uid://btrfixpi18fv1" path="res://zetores_2dTDS_assets/future-tds/roach_death_1_2.png" id="15_axc4u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3urqy"]
 radius = 12.3693
@@ -9,6 +22,7 @@ radius = 12.3693
 [node name="World" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
+z_index = 3
 script = ExtResource("1_2kxnx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
@@ -20,3 +34,151 @@ texture = ExtResource("1_qmhnh")
 shape = SubResource("CircleShape2D_3urqy")
 
 [node name="ShootTimer" type="Timer" parent="Player"]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(3, 3)
+
+[node name="Road" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(34, 7)
+texture = ExtResource("3_2huxy")
+
+[node name="Road2" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(34, -119)
+texture = ExtResource("3_2huxy")
+
+[node name="Road3" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(33, 135)
+texture = ExtResource("3_2huxy")
+
+[node name="Car3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(68, 114)
+texture = ExtResource("4_0ybpv")
+
+[node name="Car1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(4, -108)
+texture = ExtResource("5_68cl1")
+
+[node name="Corpse1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(23, -120)
+texture = ExtResource("6_8hjh7")
+
+[node name="Corpse2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(51, 103)
+rotation = 3.11192
+texture = ExtResource("7_o00sq")
+
+[node name="Road4" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(34, 263)
+texture = ExtResource("3_2huxy")
+
+[node name="Road5" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(34, -243)
+texture = ExtResource("3_2huxy")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(-55, -274)
+texture = ExtResource("8_m6bfv")
+
+[node name="Background2" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(-55, -212)
+texture = ExtResource("8_m6bfv")
+
+[node name="Background3" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(-55, -148)
+texture = ExtResource("8_m6bfv")
+
+[node name="Background4" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(-55, -84)
+scale = Vector2(0.997805, 1.12)
+texture = ExtResource("8_m6bfv")
+
+[node name="Background5" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(-55, -19)
+texture = ExtResource("8_m6bfv")
+
+[node name="Background6" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(-55, 45)
+texture = ExtResource("8_m6bfv")
+
+[node name="Background7" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(-55, 108)
+texture = ExtResource("8_m6bfv")
+
+[node name="Background8" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(-55, 172)
+texture = ExtResource("8_m6bfv")
+
+[node name="BloodGround" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(24, -113)
+texture = ExtResource("9_u7evn")
+
+[node name="BloodGround2" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(47, 104)
+texture = ExtResource("9_u7evn")
+
+[node name="Background9" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(-55, 108)
+texture = ExtResource("8_m6bfv")
+
+[node name="Background10" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(-55, 172)
+texture = ExtResource("8_m6bfv")
+
+[node name="Background11" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(-55, 236)
+texture = ExtResource("8_m6bfv")
+
+[node name="Background12" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(-55, 299)
+texture = ExtResource("8_m6bfv")
+
+[node name="DecorTrash" type="Sprite2D" parent="."]
+position = Vector2(-74, 195)
+texture = ExtResource("10_opnxd")
+
+[node name="DecorTrash2" type="Sprite2D" parent="."]
+position = Vector2(-68, -200)
+texture = ExtResource("10_opnxd")
+
+[node name="Blood0003Layer-1" type="Sprite2D" parent="."]
+position = Vector2(-47, 297)
+texture = ExtResource("11_n4uab")
+
+[node name="Blood0002Layer-1-copy" type="Sprite2D" parent="."]
+position = Vector2(40, 197)
+texture = ExtResource("12_uhcln")
+
+[node name="Blood0000Layer-2" type="Sprite2D" parent="."]
+position = Vector2(-58, 167)
+texture = ExtResource("13_cheok")
+
+[node name="RoachDeath14" type="Sprite2D" parent="."]
+position = Vector2(-61, 258)
+texture = ExtResource("14_fq51u")
+
+[node name="RoachDeath12" type="Sprite2D" parent="."]
+position = Vector2(35, 153)
+texture = ExtResource("15_axc4u")
