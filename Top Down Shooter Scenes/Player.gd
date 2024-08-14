@@ -22,6 +22,8 @@ func _physics_process(delta):
 #Bullet Code
 	if Input.is_action_just_pressed("shoot"):
 		var bullet = BULLET.instantiate()
-		bullet.rotate(direction.angle())
+		var Direction = global_position.direction_to(get_global_mouse_position())
+		bullet.rotate(Direction.angle())
 		bullet.global_position = global_position
 		world.add_child(bullet)
+		
