@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnxan0jtlr6m6"
-path="res://.godot/imported/jawbreaker_tiles.png-1abf4ebb051247c1112b24652f02f6f2.ctex"
+uid="uid://b1qq5te5j71dm"
+path="res://.godot/imported/image-removebg-preview (2).png-ebe4b44e0eaa3246dc4bca10a3063ca9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://jawbreaker/jawbreaker_tiles.png"
-dest_files=["res://.godot/imported/jawbreaker_tiles.png-1abf4ebb051247c1112b24652f02f6f2.ctex"]
+source_file="res://jawbreaker/image-removebg-preview (2).png"
+dest_files=["res://.godot/imported/image-removebg-preview (2).png-ebe4b44e0eaa3246dc4bca10a3063ca9.ctex"]
 
 [params]
 
