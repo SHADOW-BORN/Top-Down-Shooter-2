@@ -1,6 +1,5 @@
 [gd_scene load_steps=7 format=3 uid="uid://dk87m16wr30hu"]
 
-[ext_resource type="Texture2D" uid="uid://b1qq5te5j71dm" path="res://jawbreaker/image-removebg-preview (2).png" id="1_8xylv"]
 [ext_resource type="Script" path="res://Top Down Shooter Scenes/enemy_dragon.gd" id="1_v0vuc"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7yrvf"]
@@ -9,6 +8,9 @@ b = Vector2(0, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ed5vb"]
 size = Vector2(28, 7)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kh1nv"]
+load_path = "res://.godot/imported/image-removebg-preview (2).png-ebe4b44e0eaa3246dc4bca10a3063ca9.ctex"
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_s8v7k"]
 a = Vector2(0, -16)
@@ -36,7 +38,7 @@ shape = SubResource("RectangleShape2D_ed5vb")
 position = Vector2(0, 5.72205e-06)
 rotation = 1.5708
 scale = Vector2(0.0734464, 0.0787234)
-texture = ExtResource("1_8xylv")
+texture = SubResource("CompressedTexture2D_kh1nv")
 
 [node name="HurtBox" type="Area2D" parent="."]
 position = Vector2(0, 3.8147e-06)
