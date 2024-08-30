@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj3avy28f1vic"]
+
+[ext_resource type="Script" path="res://Scenes/StartButton.gd" id="1_41s8n"]
+[ext_resource type="Texture2D" uid="uid://cblt6vkyhqqxv" path="res://zetores_2dTDS_assets/post-apoc-tds/Molten Fury.jpg" id="2_3ctel"]
+
+[node name="Title Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(579, 324)
+scale = Vector2(1.82222, 1.292)
+zoom = Vector2(1.5, 1.5)
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 499.0
+offset_right = 664.0
+offset_bottom = 564.0
+text = "Start"
+script = ExtResource("1_41s8n")
+
+[node name="MoltenFury" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(579, 324)
+scale = Vector2(1.82222, 1.292)
+texture = ExtResource("2_3ctel")
+
+[connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
