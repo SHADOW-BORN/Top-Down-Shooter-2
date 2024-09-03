@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://ohs4a3nh2153"]
+
+[ext_resource type="Texture2D" uid="uid://cmyamtflm3y6f" path="res://Death Screen.jpg" id="1_l2sna"]
+[ext_resource type="Script" path="res://Scenes/death_screen1.gd" id="1_qhuvi"]
+
+[node name="Death Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qhuvi")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 466.0
+offset_right = 850.0
+offset_bottom = 556.0
+text = "Return To TitleScreen"
+
+[node name="DeathScreen" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(579, 324)
+scale = Vector2(0.9, 0.894444)
+texture = ExtResource("1_l2sna")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

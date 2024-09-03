@@ -767,3 +767,5 @@ position = Vector2(291, 58)
 
 [node name="EnemyDragon7" parent="." instance=ExtResource("14_snryq")]
 position = Vector2(239, -46)
+
+[connection signal="tree_entered" from="Player/CollisionShape2D" to="Player" method="_on_collision_shape_2d_tree_entered"]

@@ -7,7 +7,7 @@ a = Vector2(0, -13)
 b = Vector2(0, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ed5vb"]
-size = Vector2(28, 7)
+size = Vector2(28, 4.5)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kh1nv"]
 load_path = "res://.godot/imported/image-removebg-preview (2).png-ebe4b44e0eaa3246dc4bca10a3063ca9.ctex"
@@ -17,11 +17,11 @@ a = Vector2(0, -16)
 b = Vector2(0, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1li2"]
-size = Vector2(28, 7)
+size = Vector2(28, 4.5)
 
 [node name="EnemyDragon" type="CharacterBody2D" groups=["Dragon", "EnermyGroup"]]
 collision_layer = 2
-collision_mask = 2
+collision_mask = 3
 script = ExtResource("1_v0vuc")
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
@@ -30,7 +30,7 @@ rotation = 1.5708
 shape = SubResource("SegmentShape2D_7yrvf")
 
 [node name="HitBox2" type="CollisionShape2D" parent="."]
-position = Vector2(8, 3.8147e-06)
+position = Vector2(6.75, -7.10288e-07)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_ed5vb")
 
@@ -43,13 +43,17 @@ texture = SubResource("CompressedTexture2D_kh1nv")
 [node name="HurtBox" type="Area2D" parent="."]
 position = Vector2(0, 3.8147e-06)
 rotation = 1.5708
-collision_layer = 0
+collision_layer = 3
+collision_mask = 3
 
 [node name="HurtBox" type="CollisionShape2D" parent="HurtBox"]
 shape = SubResource("SegmentShape2D_s8v7k")
 
 [node name="HurtBox2" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(0, -8)
+position = Vector2(-9.09495e-13, -6.75)
 shape = SubResource("RectangleShape2D_y1li2")
 
 [node name="DamageTimer" type="Timer" parent="HurtBox"]
+
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
+[connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]

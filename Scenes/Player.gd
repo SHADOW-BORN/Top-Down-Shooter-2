@@ -27,3 +27,11 @@ func _physics_process(delta):
 		bullet.global_position = global_position
 		world.add_child(bullet)
 		
+#func _on_area_entered(area):
+	#print("Dragon collison")
+	#if area.is_in_group("Dragon"):
+		#get_tree().change_scene_to_file("res://title_screen.tscn")
+
+
+func _on_collision_shape_2d_tree_entered(area):
+	print("Dragon collison")
