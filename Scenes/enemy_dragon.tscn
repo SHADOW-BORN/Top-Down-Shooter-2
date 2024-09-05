@@ -13,11 +13,11 @@ size = Vector2(28, 4.5)
 load_path = "res://.godot/imported/image-removebg-preview (2).png-ebe4b44e0eaa3246dc4bca10a3063ca9.ctex"
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_s8v7k"]
-a = Vector2(0, -16)
-b = Vector2(0, 14)
+a = Vector2(-2.89599e-05, -8)
+b = Vector2(-1.80999e-05, -5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1li2"]
-size = Vector2(28, 4.5)
+size = Vector2(2, 3)
 
 [node name="EnemyDragon" type="CharacterBody2D" groups=["Dragon", "EnermyGroup"]]
 collision_layer = 2
@@ -41,7 +41,7 @@ scale = Vector2(0.0734464, 0.0787234)
 texture = SubResource("CompressedTexture2D_kh1nv")
 
 [node name="HurtBox" type="Area2D" parent="."]
-position = Vector2(0, 3.8147e-06)
+position = Vector2(8, 0)
 rotation = 1.5708
 collision_layer = 3
 collision_mask = 3
@@ -50,7 +50,7 @@ collision_mask = 3
 shape = SubResource("SegmentShape2D_s8v7k")
 
 [node name="HurtBox2" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(-9.09495e-13, -6.75)
+position = Vector2(-2.55972e-05, -6.5)
 shape = SubResource("RectangleShape2D_y1li2")
 
 [node name="DamageTimer" type="Timer" parent="HurtBox"]
