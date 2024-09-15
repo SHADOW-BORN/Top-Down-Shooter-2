@@ -17,7 +17,7 @@ a = Vector2(-2.89599e-05, -8)
 b = Vector2(-1.80999e-05, -5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1li2"]
-size = Vector2(2, 3)
+size = Vector2(1.49999, 2.5)
 
 [node name="EnemyDragon" type="CharacterBody2D" groups=["Dragon", "EnermyGroup"]]
 collision_layer = 2
@@ -50,7 +50,7 @@ collision_mask = 3
 shape = SubResource("SegmentShape2D_s8v7k")
 
 [node name="HurtBox2" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(-2.55972e-05, -6.5)
+position = Vector2(-2.1711e-05, -6)
 shape = SubResource("RectangleShape2D_y1li2")
 
 [node name="DamageTimer" type="Timer" parent="HurtBox"]
