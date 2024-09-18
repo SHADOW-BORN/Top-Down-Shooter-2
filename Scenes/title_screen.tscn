@@ -11,13 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(579, 324)
-scale = Vector2(1.82222, 1.292)
-zoom = Vector2(1.5, 1.5)
-
 [node name="StartButton" type="Button" parent="."]
-layout_mode = 0
 offset_left = 465.0
 offset_top = 499.0
 offset_right = 664.0
@@ -27,8 +21,13 @@ script = ExtResource("1_41s8n")
 
 [node name="MoltenFury" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(579, 324)
-scale = Vector2(1.82222, 1.292)
+position = Vector2(613.75, 350)
+scale = Vector2(2.16746, 1.576)
 texture = ExtResource("2_3ctel")
+
+[node name="Camera2D" type="Camera2D" parent="MoltenFury"]
+position = Vector2(-16.0325, -16.4974)
+scale = Vector2(0.840717, 0.819797)
+zoom = Vector2(1.5, 1.5)
 
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]

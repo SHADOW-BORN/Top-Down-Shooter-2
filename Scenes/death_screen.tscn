@@ -26,4 +26,6 @@ position = Vector2(579, 324)
 scale = Vector2(0.9, 0.894444)
 texture = ExtResource("1_l2sna")
 
+[node name="Camera2D" type="Camera2D" parent="DeathScreen"]
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
