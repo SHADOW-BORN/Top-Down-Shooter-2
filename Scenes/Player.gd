@@ -8,6 +8,7 @@ var direction_facing = Vector2.ZERO
 const BULLET = preload("res://Bullet.tscn")
 
 #Functions
+@warning_ignore("unused_parameter")
 func _physics_process(delta):
 	look_at(get_global_mouse_position())
 	#Movement
@@ -19,7 +20,7 @@ func _physics_process(delta):
 		
 	move_and_slide()
 	
-#Bullet Code
+#Bullet Code used for Shooting, For example in line 26 the bullet roatation makes it keep so the bullets faces the direction you fired it
 	if Input.is_action_just_pressed("shoot"):
 		var bullet = BULLET.instantiate()
 		var Direction = global_position.direction_to(get_global_mouse_position())
@@ -27,11 +28,4 @@ func _physics_process(delta):
 		bullet.global_position = global_position
 		world.add_child(bullet)
 		
-#func _on_area_entered(area):
-	#print("Dragon collison")
-	#if area.is_in_group("Dragon"):
-		#get_tree().change_scene_to_file("res://title_screen.tscn")
 
-
-func _on_collision_shape_2d_tree_entered(area):
-	print("Dragon collison")

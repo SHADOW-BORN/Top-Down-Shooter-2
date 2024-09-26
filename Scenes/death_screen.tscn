@@ -28,4 +28,16 @@ texture = ExtResource("1_l2sna")
 
 [node name="Camera2D" type="Camera2D" parent="DeathScreen"]
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -380.0
+offset_right = 380.0
+offset_bottom = 137.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 100
+text = "Score : "
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
